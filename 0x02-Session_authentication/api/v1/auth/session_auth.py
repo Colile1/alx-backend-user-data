@@ -1,10 +1,16 @@
 #!/usr/bin/env python3
-"""SessionAuth class for Session Authentication"""
+"""
+SessionAuth class for Session Authentication
+"""
 from api.v1.auth.auth import Auth
 import uuid
 
 class SessionAuth(Auth):
-    """SessionAuth class for session authentication"""
+    """
+    SessionAuth class for session authentication
+    This class manages user sessions using a 
+    dictionary to map session IDs to user IDs.
+    """
     user_id_by_session_id = {}
 
     def create_session(self, user_id: str = None) -> str:
